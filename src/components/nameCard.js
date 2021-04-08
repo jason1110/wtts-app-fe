@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
 import { StyleSheet, Text, View, Linking, SafeAreaView, TouchableOpacity, FlatList } from 'react-native';
-import { Card, ListItem, Avatar } from 'react-native-elements'
+
 
 
 export default function NameCard({dragName}) {
+
+console.log('youre in namecard')
+
     return (
         <View style={styles.container}>
-            {dragName.firstName}
+            <Text style={styles.title}>Hello</Text>
+            <Text>{dragName.first_name}</Text>
         </View>
     )
 }
@@ -18,25 +22,19 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
-        },   
-        card: {
-            flex: 1,
-            alignContent: 'center',
-            width: 400,
-            height: 100,
-            padding: 10,
-        },
-        image: {
-            margin: 0,
-        },
-        title: {
-            marginBottom: 0,
-            textAlign: "center",
-            justifyContent: 'center',
-            maxHeight: 50,
-            fontSize: 20,
-        },
-        content: {
-            flex: 1,
-        }
+    },
+    title: {
+        fontSize: 60,
+        alignItems: 'center',
+        transform: [{
+            rotate: '-25deg'
+        }],
+        color: '#f0f5fc',
+        flexWrap: 'wrap',
+        paddingVertical: 6,
+        paddingHorizontal: 50,
+        margin: 50,
+        marginBottom: 70,
+        fontFamily: 'Pacifico_400Regular'
+    },  
 })
