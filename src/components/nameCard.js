@@ -11,6 +11,7 @@ console.log('youre in namecard')
         <View style={styles.container}>
             <Text style={styles.title}>Hello</Text>
             <Text>{dragName.first_name}</Text>
+            <Text>{dragName.last_name}</Text>
         </View>
     )
 }
