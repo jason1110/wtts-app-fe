@@ -22,7 +22,7 @@ console.log(dragName.map(name => name.first_name))
 const showNames = () => dragName.map(name => <NameCard dragName={name} key={name.id}/>)
 
 const handleNameGenerator = () => {
-  
+  //build random generator
 }
 
   return (
