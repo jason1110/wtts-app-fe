@@ -12,7 +12,7 @@ console.log('youre in namecard')
             <Text style={styles.title}>Hello</Text>
             <Text>{dragName.first_name}</Text>
             <Text>{dragName.last_name}</Text>
-            <Text>Loves it!{dragName.likes}</Text>
+            <Text>Love it!{dragName.likes}</Text>
         </View>
     )
 }
