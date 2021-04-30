@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     title: {
-        fontSize: 60,
+        fontSize: 75,
         alignItems: 'center',
         transform: [{
             rotate: '-25deg'
