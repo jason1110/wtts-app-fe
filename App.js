@@ -25,10 +25,15 @@ const handleNameGenerator = () => {
   //build random generator
 }
 
+function getRandom(dragName) {
+  console.log(dragName)
+  return dragName[Math.floor(Math.random()*dragName.length)];
+}
+
   return (
     <View style={styles.container}>
       <Text>Welcome to the Stage!</Text>
-      <Button  title="get name" onPress={() => dragName.map(name => <NameCard dragName={name} key={name.id}/>)} />
+      <Button  title="get name" onPress={() => (getRandom(dragName))}/>
       {showNames()}
     </View>
   );
