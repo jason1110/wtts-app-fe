@@ -10,7 +10,7 @@ export default function App() {
 const [ dragName, setDragName ] = useState([]) 
 
 useEffect(() => {
-  fetch(`${baseURL}/drag_names`)
+  fetch(`${baseURL}/drag_names/${nameID}`)
   .then (response => response.json())
   .then ((names) => setDragName(names) )
   .catch((error) => {
@@ -21,8 +21,8 @@ console.log(dragName.map(name => name.first_name))
 
 const showNames = () => dragName.map(name => <NameCard dragName={name} key={name.id}/>)
 
-const handleNameGenerator = () => {
-  //build random generator
+const handleClick = () => {
+  getRandom();
 }
 
 function getRandom(dragName) {
@@ -33,7 +33,7 @@ function getRandom(dragName) {
   return (
     <View style={styles.container}>
       <Text>Welcome to the Stage!</Text>
-      <Button  title="get name" onPress={() => (getRandom(dragName))}/>
+      <Button  title="get name" onPress={handleClick}/>
       {showNames()}
     </View>
   );
