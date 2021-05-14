@@ -32,7 +32,7 @@ function getRandom(dragName) {
 
   return (
     <View style={styles.container}>
-      <Text>Welcome to the Stage!</Text>
+      <Text>Welcome to the Stage!!!!</Text>
       <Button  title="get name" onPress={handleClick}/>
       {showNames()}
     </View>
